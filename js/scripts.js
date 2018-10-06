@@ -27,12 +27,15 @@ var PingPong = function(PingPongInput) { // 1. Take a number from a user
                 outputArray.push(i)
             } else {
                 console.log("You did not enter a number, please enter a number");
-            }
+             });
         }
         console.log("");
         console.log("--------------");
         console.log("This is outputArray: " + outputArray);
     }
+    outputArray.forEach(function(x){ 
+        //
+    });
 };
 
 //UI Logic
@@ -43,7 +46,7 @@ $(document).ready(function(){
       var Userinput = parseInt($("input#PingPongInput").val());
       var result = PingPong(Userinput);
   
-      $(".output").text(result);
+      $(".output").append(result);
   
       $("#result").show(result);
     });
