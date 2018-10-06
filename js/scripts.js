@@ -6,27 +6,23 @@
 // 6. Make it so the user can enter a new number and see the results update
 
 // Business Logic
-console.log("test test");
 
 var PingPong = function(PingPongInput) {
-    console.log("test test 2");
-    console.log("This is ping pong input: " + PingPongInput);
-    console.log("This is Type of pingpongInput: " + typeof PingPongInput);
-    var arraysize = parseInt(PingPongInput);
-    console.log("This is Type of arraysize: " + typeof arraysize);
-    console.log("-------------------------------");
-    
-    var inputArray = [arraysize];
-    console.log("This is input Array: " + inputArray)
-    if (PingPongInput % 3 === 0 && PingPongInput % 15 !== 0 ) {
-        inputArray.forEach(function(x) {
-            console.log("This is x for the first if: " + x);
-        });
-    } else if (PingPongInput % 5 === 0 && PingPongInput % 15 !== 0) {
-        console.log("This is when the Else If fires off");
-    } 
-
-
+    var outputArray = []; //creating an array that will be used for the output
+    for (var i = 1; i <= PingPongInput; i++) {
+        if (i % 3 === 0 && i % 15 !== 0 ) {
+            console.log("Ping");
+        } else if (i % 5 === 0 && i % 15 !== 0) {
+            console.log("Pong");            
+        } else if (i % 15 === 0) { 
+            console.log("PingPong");
+        } else if(i % 3 !== 0 && i % 5 !== 0 && i % 15 !== 0 ) {
+            console.log("This is i: " + i);
+        } else {
+            console.log("You did not enter a number, please enter a number");
+            
+        }
+    }
 };
 
 //UI Logic
