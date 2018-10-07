@@ -33,6 +33,7 @@ var PingPong = function(PingPongInput) { // 1. Take a number from a user
         console.log("--------------");
         console.log("This is outputArray: " + outputArray);
     }
+    return outputArray;
 };
 
 //UI Logic
@@ -42,9 +43,10 @@ $(document).ready(function(){
       event.preventDefault();
       var Userinput = parseInt($("input#PingPongInput").val());
       var result = PingPong(Userinput);
-  
-      $(".output").text(result);
-  
-      $("#result").show(result);
+      $("#outputList").text("");
+      result.forEach(function(x) {
+          $("#outputList").append("<li>" + x + "</li>");
+        });
+        $("#result").show(result);
     });
   });
