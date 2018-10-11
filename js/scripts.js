@@ -14,24 +14,16 @@ var PingPong = function(PingPongInput) { // 1. Take a number from a user
     } else {
         for (var i = 1; i <= PingPongInput; i++) { // 3. For every number divisible  by 3, replace it with the string "ping"
             if (i % 3 === 0 && i % 15 !== 0 ) {
-                console.log("Ping");
                 outputArray.push("ping");
             } else if (i % 5 === 0 && i % 15 !== 0) { // 4. For every number divisible by 5 replace it with the string "pong"
-                console.log("Pong");     
-                outputArray.push("Pong");       
+                outputArray.push("Pong");
             } else if (i % 15 === 0) { // 5. For every number divisible by 15 replace it with the string "pingpong"
-                console.log("PingPong");
                 outputArray.push("PingPong")
             } else if(i % 3 !== 0 && i % 5 !== 0 && i % 15 !== 0 ) {
-                console.log("This is i: " + i);
                 outputArray.push(i)
-            } else {
-                console.log("You did not enter a number, please enter a number");
+            } else { alert("see your admin, you fucked up")
              });
         }
-        console.log("");
-        console.log("--------------");
-        console.log("This is outputArray: " + outputArray);
     }
     return outputArray;
 };
